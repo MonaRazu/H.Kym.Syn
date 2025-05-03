@@ -1,0 +1,160 @@
+/* ベースのスタイル */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding-bottom: 100px; /* スクロールできる余白を追加 */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+nav {
+  background: #444;
+  padding: 10px 0;
+  position: fixed;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #777;
+}
+
+section.intro {
+  text-align: center;
+  margin: 40px 0;
+}
+
+section.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+section.intro p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* ギャラリー部分のスタイル */
+.image-links {
+  padding: 20px;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列に固定 */
+  gap: 20px;
+  justify-content: center;
+}
+
+.image-item {
+  text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  max-width: 600px; /* 幅を600pxに固定 */
+  max-height: 800px; /* 高さを800pxに固定 */
+  object-fit: cover;
+  border-bottom: 2px solid #ddd;
+}
+
+.image-item p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+footer {
+  background: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+  .image-container {
+    grid-template-columns: repeat(2, 1fr); /* スマホでも2列に変更 */
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li a {
+    padding: 12px 25px;
+  }
+}
+

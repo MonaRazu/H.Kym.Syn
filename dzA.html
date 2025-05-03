@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ティア表</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 0;
+    }
+
+    .tier {
+      display: flex;
+      align-items: stretch;
+      margin-bottom: 10px;
+    }
+
+    .tier-label {
+      width: 60px;
+      text-align: center;
+      font-weight: bold;
+      padding: 10px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tier-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      background: white;
+      padding: 10px;
+      flex: 1;
+      border: 1px solid #ccc;
+    }
+
+    .tier-items span {
+      background: #eee;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center; /* ← 中央揃えポイント */
+      gap: 5px;
+    }
+
+    .tier-items span img {
+      width: auto;
+      height: 3em;
+      vertical-align: middle;
+    }
+
+    .S { background-color: #d10000; }
+    .A { background-color: #e67e00; }
+    .B { background-color: #d4af37; }
+    .C { background-color: #999999; }
+  </style>
+</head>
+<body>
+
+  <h1>キャラ ティア表</h1>
+
+  <div class="tier">
+    <div class="tier-label S">S</div>
+    <div class="tier-items">
+      <span>キャラ1</span>
+      <span>キャラ2</span>
+      <span><img src="https://i.pinimg.com/736x/b1/fb/90/b1fb906bbbaede18fcf04224968dab8c.jpg" alt="キャラ1">キャラ1</span>
+    </div>
+  </div>
+
+  <div class="tier">
+    <div class="tier-label A">A</div>
+    <div class="tier-items">
+      <span>キャラ3</span>
+      <span>キャラ4</span>
+    </div>
+  </div>
+
+  <div class="tier">
+    <div class="tier-label B">B</div>
+    <div class="tier-items">
+      <span>キャラ5</span>
+    </div>
+  </div>
+
+  <div class="tier">
+    <div class="tier-label C">C</div>
+    <div class="tier-items">
+      <span>キャラ6</span>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ホーム</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+
+    /* ナビゲーションバー */
+    nav.nav-main {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav.nav-sub {
+      background-color: #555;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 0;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 25px;
+      font-size: 1.1em;
+      transition: background-color 0.3s;
+      margin: 0 -8px;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    nav.nav-sub a:hover {
+      background-color: #888;
+    }
+
+    header {
+      background-color: #fff;
+      color: #333;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+      color: #000000;
+    }
+
+    header h2 {
+      margin: 0;
+      font-size: 1.5em;
+      color: #333;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #666;
+    }
+
+    main {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    main p {
+      font-size: 1.1em;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ナビゲーションバー -->
+  <nav class="nav-main">
+    <a href="../index.html">ホーム</a>
+    <a href="../dz/dzmatome.html">同人誌</a>
+    <a href="../an/anime.html">アニメ</a>
+    <a href="../av/av.html">AV</a>
+    <a href="../gz/gazou.html">画像</a>
+  </nav>
+
+  <nav class="nav-sub">
+    <a href="hm/ys.html">容姿</a>
+    <a href="hm/hk.html">服装</a>
+    <a href="hm/jy.html">状況</a>
+    <a href="hm/ko.html">行為</a>
+    <a href="hm/ti.html">体位</a>
+    <a href="hm/ky.html">キャラ</a> 
+  </nav>
+
+  <!-- ヘッダー -->
+  <header>
+    <h1>ホーム</h1>
+  </header>
+
+  <!-- メイン -->
+  <main>
+    <p>上のメニューから、カテゴリを選んでください。</p>
+  </main>
+
+</body>
+</html>
