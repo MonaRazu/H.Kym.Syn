@@ -157,18 +157,3 @@ footer p {
     padding: 12px 25px;
   }
 }
-
-.gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* PCでは自動で列数調整 */
-  gap: 20px; /* アイテム間の隙間 */
-  padding: 20px;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-@media (max-width: 768px) {
-  .gallery-container {
-    grid-template-columns: repeat(2, 1fr); /* スマホでは2列 */
-  }
-}
