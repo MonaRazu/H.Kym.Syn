@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3Dアニメ
+  </title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      width: 100%;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff;
+      color: #333;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    nav.nav-main {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      gap: 8px;
+    }
+
+    nav.nav-sub {
+      background-color: #555;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 0;
+      top: 0;
+      z-index: 1000;
+      gap: 16px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 13px;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #555;
+      color: #fff;
+    }
+
+    nav.nav-sub a:hover {
+      background-color: #888;
+      color: #fff;
+    }
+
+
+    h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+
+    .work {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+      text-align: center;
+      max-width: 300xp;
+    }
+
+    .work:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .swiper {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slide-description {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #222;
+    }
+
+    h3 {
+      margin: 10px 0 5px;
+    }
+
+    a,
+a:visited,
+a:hover,
+a:active {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* PCでは自動で列数調整 */
+  gap: 20px; /* アイテム間の隙間 */
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr); /* スマホでは2列 */
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<nav class="nav-main">
+  <a href="../index.html">ホーム</a>
+  <a href="../dz/dzmatome.html">同人誌</a>
+  <a href="../an/anime.html">アニメ</a>
+  <a href="../av/av.html">AV</a>
+  <a href="../gz/gazou.html">画像</a>
+</nav>
+
+<nav class="nav-sub">
+    <a href="2dan.html">アニメ</a>
+    <a href="3dan.html">3Dアニメ</a>
+    <a href="mtan.html">モーションアニメ</a>
+</nav>
+
+<header>
+  <h1>3Dアニメ
+  </h1>
+</header>
+
+<div class="gallery-container">
+
+<!-- 里菜と穴 -->
+<div class="work">
+    <h3><a href="https://jp.spankbang.com/7g4ah/video/rina+to+ana+bonus" target="_blank">里菜と穴</a></h3>
+    <div class="swiper swiper-rinatoana">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="https://jp.spankbang.com/7g4ah/video/rina+to+ana+bonus" target="_blank">
+            <img src="https://livedoor.blogimg.jp/kong2tnml-majimougenda/imgs/5/9/59e765ef-s.jpg" alt="里菜と穴">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="desc-rinatoana" class="slide-description"></div>
+  </div>
+    
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+
+  function initSwiper(className, descArray, descElementId) {
+    const descEl = document.getElementById(descElementId);
+    return new Swiper(className, {
+      slidesPerView: 1,
+      on: {
+        slideChange: function () {
+          descEl.textContent = descArray[this.realIndex];
+        }
+      }
+    });
+  }
+
+</script>
+
+</body>
+</html>
