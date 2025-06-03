@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>同人誌-S-
+  </title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav class="nav-main">
+  <a href="../index.html">ホーム</a>
+  <a href="../dz/dzmatome.html">同人誌</a>
+  <a href="../an/anime.html">アニメ</a>
+  <a href="../av/av.html">AV</a>
+  <a href="../gz/gazou.html">画像</a>
+</nav>
+
+<nav class="nav-sub">
+  <a href="douzinsi.html">S</a>
+  <a href="dzA.html">A</a>
+  <a href="dzB.html">B</a>
+  <a href="dzC.html">C</a>
+  <a href="dzD.html">D</a>
+  <a href="dzE.html">E</a>
+</nav>
+
+<header>
+  <h1>同人誌-S-
+  </h1>
+</header>
+
+<div class="gallery-container">
+
+  <!-- 作品：毒猫ノイル -->
+  <div class="work">
+    <h3>
+      <a href="https://momon-ga.com/cartoonist/%e6%af%92%e7%8c%ab%e3%83%8e%e3%82%a4%e3%83%ab/" target="_blank">毒猫ノイル</a>
+    </h3>
+    <div class="swiper swiper-noyle">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="https://momon-ga.com/fanzine/mo2904637/" target="_blank">
+            <img src="https://cdn4.momon-ga.com/galleries/2904637/1.webp" alt="フェルンに悪いことをする話">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://momon-ga.com/fanzine/mo2652185/" target="_blank">
+            <img src="https://z3.momon-ga.com/galleries/2652185/1.webp" alt="泥酔した井ノ上たきなに悪いことをする話">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="desc-noyle" class="slide-description">フェルンに悪いことをする話</div>
+  </div>
+
+  <!-- 作品：チーム☆ラッキー -->
+<div class="work">
+  <h3>
+    <a href="https://momon-ga.com/cartoonist/%e3%83%81%e3%83%bc%e3%83%a0%e2%98%86%e3%83%a9%e3%83%83%e3%82%ad%e3%83%bc/" target="_blank">チーム☆ラッキー</a>
+  </h3>
+  <div class="swiper swiper-lucky">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <a href="https://momon-ga.com/fanzine/mo2759860/" target="_blank">
+          <img src="https://z3.momon-ga.com/galleries/2759860/1.webp" alt="おじさんで埋める穴">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="https://momon-ga.com/fanzine/mo2759967/" target="_blank">
+          <img src="https://z3.momon-ga.com/galleries/2759967/1.webp" alt="雨の日は、ほんのり乳首">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="desc-lucky" class="slide-description">おじさんで埋める穴</div>
+</div>
+
+</div>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+
+  function initSwiper(className, descArray, descElementId) {
+    const descEl = document.getElementById(descElementId);
+    return new Swiper(className, {
+      slidesPerView: 1,
+      on: {
+        slideChange: function () {
+          descEl.textContent = descArray[this.realIndex];
+        }
+      }
+    });
+  }
+
+  const descNoyle = [
+  "フェルンに悪いことをする話",
+  "泥酔した井ノ上たきなに悪いことをする話"
+  ];
+
+  initSwiper(".swiper-noyle", descNoyle, "desc-noyle");
+
+  const descLucky = [
+  "おじさんで埋める穴",
+  "雨の日は、ほんのり乳首"
+];
+
+initSwiper(".swiper-lucky", descLucky, "desc-lucky");
+
+</script>
+
+</body>
+</html>
