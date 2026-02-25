@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>同人誌-S-</title>
+
+  <!-- 元CSS -->
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav class="nav-main">
+  <a href="../index.html">
+    <span class="nav-jp">ホーム</span>
+    <span class="nav-en">HOME</span>
+  </a>
+  <a href="dzmatome.html" class="current">
+    <span class="nav-jp">同人誌</span>
+    <span class="nav-en">MANGA</span>
+  </a>
+  <a href="../an/anime.html">
+    <span class="nav-jp">アニメ</span>
+    <span class="nav-en">ANIME</span>
+  </a>
+  <a href="../av/av.html">
+    <span class="nav-jp">動画</span>
+    <span class="nav-en">VIDEO</span>
+  </a>
+  <a href="../gz/gazou.html">
+    <span class="nav-jp">画像</span>
+    <span class="nav-en">GALLERY</span>
+  </a>
+</nav>
+
+<nav class="nav-sub">
+  <a href="dzS.html" class="current">S</a>
+  <a href="dzA.html">A</a>
+  <a href="dzB.html">B</a>
+  <a href="dzC.html">C</a>
+  <a href="dzD.html">D</a>
+  <a href="dzE.html">E</a>
+  <a href="dzburuaka.html">blac</a>
+</nav>
+
+<header>
+  <h1>同人誌 - S -</h1>
+</header>
+
+<div class="gallery-container">
+
+<div class='work'><h3>缶詰の日々</h3><img src='https://z3.momon-ga.com/galleries/1869346/1.webp' alt='壁尻募金'><div class='slide-description'>壁尻募金</div></div>
+<div class='work'><h3>だにまる</h3><img src='https://z3.momon-ga.com/galleries/2815273/1.webp' alt='元カレとはできなかったセックスしてもいいですか?'><div class='slide-description'>元カレとはできなかったセックスしてもいいですか?</div></div>
+<div class='work'><h3>ひやしまくら</h3><img src='https://z2.momon-ga.com/galleries/3106578/1.webp' alt='電車通学中こっそり中出しさせてくれるクラスメイトの黒井さん'><div class='slide-description'>電車通学中こっそり中出しさせてくれるクラスメイトの黒井さん</div></div>
+<div class='work'><h3>きょくちょ</h3><img src='https://z2.momon-ga.com/galleries/1898745/1.webp' alt='メイド教育'><div class='slide-description'>メイド教育</div></div>
+<div class='work'><h3>黒本君</h3><img src='https://z3.momon-ga.com/galleries/2319200/1.webp' alt='性教育シリーズ'><div class='slide-description'>性教育シリーズ</div></div>
+<div class='work'><h3>無糖紅茶</h3><img src='https://z2.momon-ga.com/galleries/2677686/1.webp' alt='メイドさんの中がいっぱいになるまで連続射精えっち'><div class='slide-description'>メイドさんの中がいっぱいになるまで連続射精えっち</div></div>
+<div class='work'><h3>野良ヒグマ</h3><img src='https://z2.momon-ga.com/galleries/2447590/1.webp' alt='もし海辺でエッチなお姉さんと出会ったら'><div class='slide-description'>もし海辺でエッチなお姉さんと出会ったら</div></div>
+<div class='work'><h3>いづれ</h3><img src='https://z3.momon-ga.com/galleries/2898534/1.webp' alt='勝手に住みついてる陰キャ幽霊のカラダを好き勝手する話'><div class='slide-description'>勝手に住みついてる陰キャ幽霊のカラダを好き勝手する話</div></div>
+<div class='work'><h3>毒猫ノイル</h3><img src='https://z3.momon-ga.com/galleries/2904637/1.webp' alt='フェルンに悪いことをする話'><div class='slide-description'>フェルンに悪いことをする話</div></div>
+<div class='work'><h3>にゅう工房</h3><img src='https://z2.momon-ga.com/galleries/3142957/1.webp' alt='チートアイテム管理局のお仕事EX 散々ヤラれた後だし、どうせ全部忘れるから、被害者つまみ食いしてもいいよね'><div class='slide-description'>チートアイテム管理局のお仕事EX 散々ヤラれた後だし、どうせ全部忘れるから、被害者つまみ食いしてもいいよね</div></div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  // 1. 全ての画像に遅延読み込みを自動セット（「死ぬ」作業の回避）
+  document.querySelectorAll('img').forEach(img => {
+    img.setAttribute('loading', 'lazy');
+  });
+
+  // 2. Swiperの初期化
+  document.querySelectorAll('.swiper').forEach((el) => {
+    const workEl = el.closest('.work');
+    const descEl = workEl.querySelector('.slide-description');
+    const linkEl = workEl.querySelector('.sw-link');
+
+    new Swiper(el, {
+      slidesPerView: 1,
+      loop: true, // ループできるようにしておくと便利です
+      on: {
+        slideChange: function () {
+          const activeSlide = this.slides[this.activeIndex];
+          const title = activeSlide.getAttribute('data-title');
+          const url = activeSlide.getAttribute('data-url');
+
+          if (descEl) descEl.textContent = title;
+          if (linkEl && url) linkEl.href = url;
+        }
+      }
+    });
+  });
+  let lastScrollY = window.scrollY;
+  const subNav = document.querySelector('.nav-sub');
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // 下にスクロールしている ＝ 子ナビを隠す
+      subNav.classList.add('hide');
+    } else {
+      // 上にスクロールしている ＝ 子ナビを表示
+      subNav.classList.remove('hide');
+    }
+    
+    lastScrollY = currentScrollY;
+  });
+</script>
+
+
+</body>
+</html>

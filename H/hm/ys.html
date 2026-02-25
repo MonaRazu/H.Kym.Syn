@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>心体</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    header {
+      margin-bottom: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ナビゲーションバー -->
+<nav class="nav-main">
+  <a href="../index.html" class="current">
+    <span class="nav-jp">ホーム</span>
+    <span class="nav-en">HOME</span>
+  </a>
+  <a href="../dz/dzmatome.html">
+    <span class="nav-jp">同人誌</span>
+    <span class="nav-en">MANGA</span>
+  </a>
+  <a href="../an/anime.html">
+    <span class="nav-jp">アニメ</span>
+    <span class="nav-en">ANIME</span>
+  </a>
+  <a href="../av/av.html">
+    <span class="nav-jp">動画</span>
+    <span class="nav-en">VIDEO</span>
+  </a>
+  <a href="../gz/gazou.html">
+    <span class="nav-jp">画像</span>
+    <span class="nav-en">GALLERY</span>
+  </a>
+</nav>
+
+  <nav class="nav-sub">
+    <a href="ys.html" class="current">心体</a>
+    <a href="hk.html">服装</a>
+    <a href="jy.html">状況</a>
+    <a href="ko.html">行為</a>
+    <a href="ti.html">体位</a>
+    <a href="ky.html">刺女</a> 
+  </nav>
+
+  <!-- ヘッダー -->
+  <header>
+    <h1>心体Tier</h1>
+  </header>
+
+  <div class="tier">
+    <div class="tier-label S">S</div>
+    <div class="tier-items">
+      <span>太もも</span>
+      <span>貧乳</span>
+      <span>尻</span>
+    </div>
+  </div>
+
+  <div class="tier">
+    <div class="tier-label A">A</div>
+    <div class="tier-items">
+      <span>ロリ</span>
+      <span>妹</span>
+      <span>ツンデレ</span>
+      <span>ヤンデレ</span>
+    </div>
+  </div>
+
+  <div class="tier">
+    <div class="tier-label B">B</div>
+    <div class="tier-items">
+      <span>お姉さん</span>
+      <span>生意気</span>
+    </div>
+  </div>
+
+  <div class="tier">
+    <div class="tier-label C">C</div>
+    <div class="tier-items">
+      <span>ここ</span>
+    </div>
+  </div>
+
+  <div class="tier">
+    <div class="tier-label D">D</div>
+    <div class="tier-items">
+      <span>ムチムチ</span>
+    </div>
+  </div>
+
+  <div class="tier">
+    <div class="tier-label E">E</div>
+    <div class="tier-items">
+      <span>巨乳</span>
+    </div>
+  </div>
+
+  <div class="tier">
+    <div class="tier-label F">F</div>
+    <div class="tier-items">
+      <span>人妻</span>
+    </div>
+  </div>
+
+  <div class="tier">
+    <div class="tier-label 生無">生無</div>
+    <div class="tier-items">
+      <span>熟女</span>
+      <span>垂れ乳</span>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  // 1. 全ての画像に遅延読み込みを自動セット（「死ぬ」作業の回避）
+  document.querySelectorAll('img').forEach(img => {
+    img.setAttribute('loading', 'lazy');
+  });
+
+  // 2. Swiperの初期化
+  document.querySelectorAll('.swiper').forEach((el) => {
+    const workEl = el.closest('.work');
+    const descEl = workEl.querySelector('.slide-description');
+    const linkEl = workEl.querySelector('.sw-link');
+
+    new Swiper(el, {
+      slidesPerView: 1,
+      loop: true, // ループできるようにしておくと便利です
+      on: {
+        slideChange: function () {
+          const activeSlide = this.slides[this.activeIndex];
+          const title = activeSlide.getAttribute('data-title');
+          const url = activeSlide.getAttribute('data-url');
+
+          if (descEl) descEl.textContent = title;
+          if (linkEl && url) linkEl.href = url;
+        }
+      }
+    });
+  });
+  let lastScrollY = window.scrollY;
+  const subNav = document.querySelector('.nav-sub');
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // 下にスクロールしている ＝ 子ナビを隠す
+      subNav.classList.add('hide');
+    } else {
+      // 上にスクロールしている ＝ 子ナビを表示
+      subNav.classList.remove('hide');
+    }
+    
+    lastScrollY = currentScrollY;
+  });
+</script>
+
+</body>
+</html>
