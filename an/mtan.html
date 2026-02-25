@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>モーションアニメ</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav class="nav-main">
+  <a href="../index.html">
+    <span class="nav-jp">ホーム</span>
+    <span class="nav-en">HOME</span>
+  </a>
+  <a href="../dz/dzmatome.html">
+    <span class="nav-jp">同人誌</span>
+    <span class="nav-en">MANGA</span>
+  </a>
+  <a href="anime.html" class="current">
+    <span class="nav-jp">アニメ</span>
+    <span class="nav-en">ANIME</span>
+  </a>
+  <a href="../av/av.html">
+    <span class="nav-jp">動画</span>
+    <span class="nav-en">VIDEO</span>
+  </a>
+  <a href="../gz/gazou.html">
+    <span class="nav-jp">画像</span>
+    <span class="nav-en">GALLERY</span>
+  </a>
+</nav>
+
+<nav class="nav-sub">
+    <a href="2dan.html">2D</a>
+    <a href="3dan.html">3D</a>
+    <a href="mtan.html" class="current">Motion</a>
+</nav>
+
+<header>
+  <h1>モーションアニメ</h1>
+</header>
+
+<div class="gallery-container">
+
+  <div class='work'><h3><a href='https://jp.spankbang.com/8zt2c/video/kazusa' target='_blank'>カズサ</a></h3><a href='https://jp.spankbang.com/8zt2c/video/kazusa' target='_blank'><img src='https://tbi.sb-cd.com/t/15107556/1/5/w:800/t6-enh/kazusa.jpg' alt='バニーガール騎乗位'></a><div class='slide-description'>バニーガール騎乗位</div></div>
+  <div class='work'><h3><a href='https://jp.spankbang.com/aretn-rgrvs5/playlist/blue+a' target='_blank'>リオ</a></h3><a href='https://jp.spankbang.com/aretn-rgrvs5/playlist/blue+a' target='_blank'><img src='https://tbi.sb-cd.com/t/15386934/1/5/w:800/t6-enh/lio-from-blue-archive-sex-pass.jpg' alt='騎乗位'></a><div class='slide-description'>騎乗位</div></div>
+  <div class='work'><h3><a href='https://jp.pornhub.com/view_video.php?viewkey=ph62217a6b2e90e' target='_blank'>サキュバス</a></h3><a href='https://jp.pornhub.com/view_video.php?viewkey=ph62217a6b2e90e' target='_blank'><img src='https://ei.phncdn.com/videos/202203/04/404048471/original/(m=eafTGgaaaa)(mh=u2lBo8dPTNDJxSRQ)15.jpg' alt='【エロゲー Role player:小粥姉妹の粘膜ポトレ動画14】動くHシーン サキュバス聖良ちゃんと騎乗位中出しセックス！'></a><div class='slide-description'>【エロゲー Role player:小粥姉妹の粘膜ポトレ動画14】動くHシーン サキュバス聖良ちゃんと騎乗位中出しセックス！</div></div>
+  <div class='work'><h3><a href='https://www.xvideos.com/video.otmtctof6ea/_7' target='_blank' class='sw-link'>断面図</a></h3><div class='swiper'><div class='swiper-wrapper'>
+        <div class='swiper-slide' data-title='金髪' data-url='https://www.xvideos.com/video.otmtctof6ea/_7'><a href='https://www.xvideos.com/video.otmtctof6ea/_7' target='_blank'><img src='https://thumb-cdn77.xvideos-cdn.com/c1267ac2-a1f2-4c7b-a61d-937ada8500b5/0/xv_18_p.jpg' alt='断面図'></a></div>
+  </div></div><div class='slide-description'>金髪</div></div>
+  <div class='work'><h3><a href='https://www.xvideos.com/video.ufcbcev5221/_' target='_blank'>サキュバス</a></h3><a href='https://www.xvideos.com/video.ufcbcev5221/_' target='_blank'><img src='https://thumb-cdn77.xvideos-cdn.com/cc49f484-f0db-4fcc-8be2-205e3013e25a/0/xv_15_p.jpg' alt='黒髪ショート側位'></a><div class='slide-description'>黒髪ショート側位</div></div>
+
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  // 1. 全ての画像に遅延読み込みを自動セット（「死ぬ」作業の回避）
+  document.querySelectorAll('img').forEach(img => {
+    img.setAttribute('loading', 'lazy');
+  });
+
+  // 2. Swiperの初期化
+  document.querySelectorAll('.swiper').forEach((el) => {
+    const workEl = el.closest('.work');
+    const descEl = workEl.querySelector('.slide-description');
+    const linkEl = workEl.querySelector('.sw-link');
+
+    new Swiper(el, {
+      slidesPerView: 1,
+      loop: true, // ループできるようにしておくと便利です
+      on: {
+        slideChange: function () {
+          const activeSlide = this.slides[this.activeIndex];
+          const title = activeSlide.getAttribute('data-title');
+          const url = activeSlide.getAttribute('data-url');
+
+          if (descEl) descEl.textContent = title;
+          if (linkEl && url) linkEl.href = url;
+        }
+      }
+    });
+  });
+  let lastScrollY = window.scrollY;
+  const subNav = document.querySelector('.nav-sub');
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // 下にスクロールしている ＝ 子ナビを隠す
+      subNav.classList.add('hide');
+    } else {
+      // 上にスクロールしている ＝ 子ナビを表示
+      subNav.classList.remove('hide');
+    }
+    
+    lastScrollY = currentScrollY;
+  });
+</script>
+
+</body>
+</html>
