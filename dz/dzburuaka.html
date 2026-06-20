@@ -31,6 +31,10 @@
     <span class="nav-jp">画像</span>
     <span class="nav-en">GALLERY</span>
   </a>
+  <a href="../search.html" class="nav-search">
+    <span class="nav-jp">検索</span>
+    <span class="nav-en">SEARCH</span>
+  </a>
 </nav>
 
 <nav class="nav-sub">
@@ -76,55 +80,18 @@
 <div class='work'><h3>ムチムチ亭</h3><img src='https://z2.momon-ga.com/galleries/3712692/1.webp' alt='先生、催眠が効いてません!!'><div class='slide-description'>先生、催眠が効いてません!!</div></div>
 <div class='work'><h3>比嘉チ屋</h3><img src='https://z3.momon-ga.com/galleries/3728476/1.webp' alt='ユウカとケッコンするしかねぇ!'><div class='slide-description'>ユウカとケッコンするしかねぇ!</div></div>
 <div class='work'><h3>NikomiC Ramen</h3><img src='https://z2.momon-ga.com/galleries/3736419/1.webp' alt='獣ノ淫猫 杏山カズサの発情期'><div class='slide-description'>獣ノ淫猫 杏山カズサの発情期</div></div>
+<div class='work'><h3>ぷにみるく / ひんにゃー</h3><img src='https://z2.momon-ga.com/galleries/3752477/1.webp' alt='ラグジュアリー・ナイト・ミッション'><div class='slide-description'>ラグジュアリー・ナイト・ミッション</div></div>
+<div class='work'><h3>ほこり屋さん / おくらほこり</h3><img src='https://z3.momon-ga.com/galleries/3754406/1.webp' alt='甘カヨコ責'><div class='slide-description'>甘カヨコ責</div></div>
+<div class='work'><h3>鳩小屋 / 鳩春</h3><img src='https://z3.momon-ga.com/galleries/3755624/1.webp' alt='契薬交唇'><div class='slide-description'>契薬交唇</div></div>
+<div class='work'><h3>へそのゴマ油/ へこまん</h3><img src='https://z2.momon-ga.com/galleries/3772351/1.webp' alt='略奪輪廻'><div class='slide-description'>略奪輪廻</div></div>
+<div class='work'><h3>榎屋 / eno</h3><img src='https://z2.momon-ga.com/galleries/2833440/1.webp' alt='春中毒'><div class='slide-description'>春中毒</div></div>
+<div class='work'><h3>駿河クロイツ</h3><img src='https://z3.momon-ga.com/galleries/3783768/1.webp' alt='カンナと・・・'><div class='slide-description'>カンナと・・・</div></div>
 
 
 
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  // 1. 全ての画像に遅延読み込みを自動セット（「死ぬ」作業の回避）
-  document.querySelectorAll('img').forEach(img => {
-    img.setAttribute('loading', 'lazy');
-  });
-
-  // 2. Swiperの初期化
-  document.querySelectorAll('.swiper').forEach((el) => {
-    const workEl = el.closest('.work');
-    const descEl = workEl.querySelector('.slide-description');
-    const linkEl = workEl.querySelector('.sw-link');
-
-    new Swiper(el, {
-      slidesPerView: 1,
-      loop: true, // ループできるようにしておくと便利です
-      on: {
-        slideChange: function () {
-          const activeSlide = this.slides[this.activeIndex];
-          const title = activeSlide.getAttribute('data-title');
-          const url = activeSlide.getAttribute('data-url');
-
-          if (descEl) descEl.textContent = title;
-          if (linkEl && url) linkEl.href = url;
-        }
-      }
-    });
-  });
-  let lastScrollY = window.scrollY;
-  const subNav = document.querySelector('.nav-sub');
-
-  window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-      // 下にスクロールしている ＝ 子ナビを隠す
-      subNav.classList.add('hide');
-    } else {
-      // 上にスクロールしている ＝ 子ナビを表示
-      subNav.classList.remove('hide');
-    }
-    
-    lastScrollY = currentScrollY;
-  });
-</script>
+<script src="../main.js"></script>
 
 </body>
 

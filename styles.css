@@ -303,3 +303,113 @@ nav.nav-sub span {
   display: block;
   margin: 0 auto;    /* 中央に配置 */
 }
+
+/* ==========================================
+   6. サーチ
+   ========================================== */
+
+.search-page {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+  padding: 24px 0 80px;
+}
+
+.site-search-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px 20px;
+  font-size: 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  outline: none;
+}
+
+.site-search-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.site-search-status {
+  margin: 18px 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.site-search-results {
+  display: grid;
+  gap: 16px;
+}
+
+.search-result-card {
+  display: block;
+  padding: 18px;
+  border-radius: 18px;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.search-result-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.search-result-category {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+.search-result-card h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.search-result-card p {
+  margin: 0 0 12px;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.search-result-location {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* ==========================================
+   7. スマホ用：メインnavを3個×2段にする
+   ========================================== */
+
+@media (max-width: 768px) {
+  nav.nav-main {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    padding: 8px 4px;
+  }
+
+  nav.nav-main a {
+    width: 33.333%;
+    padding: 6px 2px;
+    text-align: center;
+  }
+
+  nav.nav-main .nav-jp {
+    font-size: 0.52rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 1px;
+  }
+
+  nav.nav-main .nav-en {
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+
+  /* メインnavが2段になるので、サブnavの固定位置を下げる */
+  nav.nav-sub {
+    top: 90px;
+  }
+}

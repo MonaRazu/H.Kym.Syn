@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>検索</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav-main">
+  <a href="index.html">
+    <span class="nav-jp">ホーム</span>
+    <span class="nav-en">HOME</span>
+  </a>
+  <a href="dz/dzmatome.html">
+    <span class="nav-jp">同人誌</span>
+    <span class="nav-en">MANGA</span>
+  </a>
+  <a href="an/anime.html">
+    <span class="nav-jp">アニメ</span>
+    <span class="nav-en">ANIME</span>
+  </a>
+  <a href="av/av.html">
+    <span class="nav-jp">動画</span>
+    <span class="nav-en">VIDEO</span>
+  </a>
+  <a href="gz/gazou.html">
+    <span class="nav-jp">画像</span>
+    <span class="nav-en">GALLERY</span>
+  </a>
+  <a href="../search.html" class="current" class="nav-search">
+    <span class="nav-jp">検索</span>
+    <span class="nav-en">SEARCH</span>
+  </a>
+</nav>
+
+<header>
+  <h1>検索</h1>
+</header>
+
+<main class="search-page">
+  <input id="siteSearchInput" class="site-search-input" type="text" placeholder="作品名・作者名・女優名で検索">
+
+  <div id="siteSearchStatus" class="site-search-status">
+    検索データを読み込み中...
+  </div>
+
+  <div id="siteSearchResults" class="site-search-results"></div>
+</main>
+
+<script src="search.js"></script>
+</body>
+</html>

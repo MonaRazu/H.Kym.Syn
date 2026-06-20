@@ -35,6 +35,10 @@
     <span class="nav-jp">画像</span>
     <span class="nav-en">GALLERY</span>
   </a>
+  <a href="../search.html" class="nav-search">
+    <span class="nav-jp">検索</span>
+    <span class="nav-en">SEARCH</span>
+  </a>
 </nav>
 
   <nav class="nav-sub">
@@ -114,50 +118,7 @@
   </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  // 1. 全ての画像に遅延読み込みを自動セット（「死ぬ」作業の回避）
-  document.querySelectorAll('img').forEach(img => {
-    img.setAttribute('loading', 'lazy');
-  });
-
-  // 2. Swiperの初期化
-  document.querySelectorAll('.swiper').forEach((el) => {
-    const workEl = el.closest('.work');
-    const descEl = workEl.querySelector('.slide-description');
-    const linkEl = workEl.querySelector('.sw-link');
-
-    new Swiper(el, {
-      slidesPerView: 1,
-      loop: true, // ループできるようにしておくと便利です
-      on: {
-        slideChange: function () {
-          const activeSlide = this.slides[this.activeIndex];
-          const title = activeSlide.getAttribute('data-title');
-          const url = activeSlide.getAttribute('data-url');
-
-          if (descEl) descEl.textContent = title;
-          if (linkEl && url) linkEl.href = url;
-        }
-      }
-    });
-  });
-  let lastScrollY = window.scrollY;
-  const subNav = document.querySelector('.nav-sub');
-
-  window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-      // 下にスクロールしている ＝ 子ナビを隠す
-      subNav.classList.add('hide');
-    } else {
-      // 上にスクロールしている ＝ 子ナビを表示
-      subNav.classList.remove('hide');
-    }
-    
-    lastScrollY = currentScrollY;
-  });
-</script>
+<script src="../main.js"></script>
 
 </body>
 </html>

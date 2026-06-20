@@ -31,6 +31,10 @@
     <span class="nav-jp">画像</span>
     <span class="nav-en">GALLERY</span>
   </a>
+  <a href="../search.html" class="nav-search">
+    <span class="nav-jp">検索</span>
+    <span class="nav-en">SEARCH</span>
+  </a>
 </nav>
 
 <nav class="nav-sub">
@@ -102,55 +106,16 @@
 <div class='work'><h3>カルムアトモスフィア</h3><img src='https://z2.momon-ga.com/galleries/3260849/1.webp' alt='異世界に行ったらエロ漫画の世界だった・・・お話 -サキュバス討伐編-'><div class='slide-description'>異世界に行ったらエロ漫画の世界だった・・・お話 -サキュバス討伐編-</div></div>
 <div class='work'><h3>からももたると</h3><img src='https://z3.momon-ga.com/galleries/2634554/1.webp' alt='真面目なだけが取り柄の僕が破滅願望の生徒に性癖をぐちゃぐちゃに歪まされた話～だから僕は家庭教師を辞めた～'><div class='slide-description'>真面目なだけが取り柄の僕が破滅願望の生徒に性癖をぐちゃぐちゃに歪まされた話～だから僕は家庭教師を辞めた～</div></div>
 <div class='work'><h3>うすい影本舗 </h3><img src='https://z2.momon-ga.com/galleries/3732339/1.webp' alt='エース先輩におまかせ♡'><div class='slide-description'>エース先輩におまかせ♡</div></div>
+<div class='work'><h3>赤柴本舗/ 胃草</h3><img src='https://z2.momon-ga.com/galleries/3750851/1.webp' alt='性欲つよつよ陸上部に搾り取られる話'><div class='slide-description'>性欲つよつよ陸上部に搾り取られる話</div></div>
+<div class='work'><h3>ナイロン100% / ナイロン</h3><img src='https://z3.momon-ga.com/galleries/3759447/1.webp' alt='巨乳（デカパイ）ハーレム水泳部のマネージャーになりました！'><div class='slide-description'>巨乳（デカパイ）ハーレム水泳部のマネージャーになりました！</div></div>
+<div class='work'><h3>あんのみけ</h3><img src='https://z3.momon-ga.com/galleries/3780883/2.webp' alt='雪あそび'><div class='slide-description'>雪あそび</div></div>
+
 
 
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  // 1. 全ての画像に遅延読み込みを自動セット（「死ぬ」作業の回避）
-  document.querySelectorAll('img').forEach(img => {
-    img.setAttribute('loading', 'lazy');
-  });
-
-  // 2. Swiperの初期化
-  document.querySelectorAll('.swiper').forEach((el) => {
-    const workEl = el.closest('.work');
-    const descEl = workEl.querySelector('.slide-description');
-    const linkEl = workEl.querySelector('.sw-link');
-
-    new Swiper(el, {
-      slidesPerView: 1,
-      loop: true, // ループできるようにしておくと便利です
-      on: {
-        slideChange: function () {
-          const activeSlide = this.slides[this.activeIndex];
-          const title = activeSlide.getAttribute('data-title');
-          const url = activeSlide.getAttribute('data-url');
-
-          if (descEl) descEl.textContent = title;
-          if (linkEl && url) linkEl.href = url;
-        }
-      }
-    });
-  });
-  let lastScrollY = window.scrollY;
-  const subNav = document.querySelector('.nav-sub');
-
-  window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-      // 下にスクロールしている ＝ 子ナビを隠す
-      subNav.classList.add('hide');
-    } else {
-      // 上にスクロールしている ＝ 子ナビを表示
-      subNav.classList.remove('hide');
-    }
-    
-    lastScrollY = currentScrollY;
-  });
-</script>
+<script src="../main.js"></script>
 
 </body>
 </html>

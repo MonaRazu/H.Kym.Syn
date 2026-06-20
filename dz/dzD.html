@@ -31,6 +31,10 @@
     <span class="nav-jp">画像</span>
     <span class="nav-en">GALLERY</span>
   </a>
+  <a href="../search.html" class="nav-search">
+    <span class="nav-jp">検索</span>
+    <span class="nav-en">SEARCH</span>
+  </a>
 </nav>
 
 <nav class="nav-sub">
@@ -102,55 +106,22 @@
 <div class='work'><h3>ろくもんせんアスタリスク</h3><img src='https://z2.momon-ga.com/galleries/3716000/1.webp' alt='万引きJKは自ら檻に入る'><div class='slide-description'>万引きJKは自ら檻に入る</div></div>
 <div class='work'><h3>ひっさつわざ</h3><img src='https://z2.momon-ga.com/galleries/3728957/1.webp' alt='体育祭'><div class='slide-description'>体育祭</div></div>
 <div class='work'><h3>手裏剣オブザイヤー</h3><img src='https://z3.momon-ga.com/galleries/3467032/1.webp' alt='この間まで処女だったS妹におにいちんち〇をお仕置きされる'><div class='slide-description'>この間まで処女だったS妹におにいちんち〇をお仕置きされる</div></div>
+<div class='work'><h3>L.G.C. / リブユウキ</h3><img src='https://z3.momon-ga.com/galleries/3748044/1.webp' alt='大型犬みたいな彼女2 ～ビーチで金ビキニ編～'><div class='slide-description'>大型犬みたいな彼女2 ～ビーチで金ビキニ編～</div></div>
+<div class='work'><h3>アットホーム酒家 / たくのみ</h3><img src='https://z2.momon-ga.com/galleries/3752597/1.webp' alt='ほしょくくらぶ2'><div class='slide-description'>ほしょくくらぶ2</div></div>
+<div class='work'><h3>泥中のアイス / どろずみ</h3><img src='https://z2.momon-ga.com/galleries/3757481/49.webp' alt='双子の兄妹強●近親相姦つがいじめ'><div class='slide-description'>双子の兄妹強●近親相姦つがいじめ</div></div>
+<div class='work'><h3>かわさき</h3><img src='https://z3.momon-ga.com/galleries/3757937/1.webp' alt='「彼氏の周りにいて欲しくない女」とめちゃくちゃ浮気SEXする話'><div class='slide-description'>「彼氏の周りにいて欲しくない女」とめちゃくちゃ浮気SEXする話</div></div>
+<div class='work'><h3>パイレーツキャット</h3><img src='https://z3.momon-ga.com/galleries/3259107/1.webp' alt='性なる賢者でごめんなさい♥～第1章ガマンしないとダメなのに～'><div class='slide-description'>性なる賢者でごめんなさい♥～第1章ガマンしないとダメなのに～</div></div>
+<div class='work'><h3>しえら⟡りうむ</h3><img src='https://z3.momon-ga.com/galleries/3765283/1.webp' alt='さきゅばすさんとショタくん'><div class='slide-description'>さきゅばすさんとショタくん</div></div>
+<div class='work'><h3>nyarisu</h3><img src='https://z3.momon-ga.com/galleries/3780082/1.webp' alt='ゲームうまおダイスキ'><div class='slide-description'>ゲームうまおダイスキ</div></div>
+<div class='work'><h3>shakestyle / ShAKe</h3><img src='https://z3.momon-ga.com/galleries/3781151/1.webp' alt='初汐ポラリス'><div class='slide-description'>初汐ポラリス</div></div>
+<div class='work'><h3>umehisa</h3><img src='https://tc-animate.techorus-cdn.com/resize_image/resize_image.php?image=34771453.JPG' alt='陰にかどわかされて'><div class='slide-description'>陰にかどわかされて</div></div>
+<div class='work'><h3>Curiocity / やたぬき圭</h3><img src='https://z2.momon-ga.com/galleries/3785938/1.webp' alt='大噛さんと被食者の俺'><div class='slide-description'>大噛さんと被食者の俺</div></div>
 
 
 
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  // 1. 全ての画像に遅延読み込みを自動セット（「死ぬ」作業の回避）
-  document.querySelectorAll('img').forEach(img => {
-    img.setAttribute('loading', 'lazy');
-  });
-
-  // 2. Swiperの初期化
-  document.querySelectorAll('.swiper').forEach((el) => {
-    const workEl = el.closest('.work');
-    const descEl = workEl.querySelector('.slide-description');
-    const linkEl = workEl.querySelector('.sw-link');
-
-    new Swiper(el, {
-      slidesPerView: 1,
-      loop: true, // ループできるようにしておくと便利です
-      on: {
-        slideChange: function () {
-          const activeSlide = this.slides[this.activeIndex];
-          const title = activeSlide.getAttribute('data-title');
-          const url = activeSlide.getAttribute('data-url');
-
-          if (descEl) descEl.textContent = title;
-          if (linkEl && url) linkEl.href = url;
-        }
-      }
-    });
-  });
-  let lastScrollY = window.scrollY;
-  const subNav = document.querySelector('.nav-sub');
-
-  window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-      // 下にスクロールしている ＝ 子ナビを隠す
-      subNav.classList.add('hide');
-    } else {
-      // 上にスクロールしている ＝ 子ナビを表示
-      subNav.classList.remove('hide');
-    }
-    
-    lastScrollY = currentScrollY;
-  });
-</script>
+<script src="../main.js"></script>
 
 </body>
 
