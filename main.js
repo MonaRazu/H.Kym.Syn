@@ -5,6 +5,20 @@ document.querySelectorAll(".work").forEach((work, index) => {
   }
 });
 
+function scrollToCurrentHashItem() {
+  if (!location.hash) return;
+
+  const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (!target) return;
+
+  requestAnimationFrame(() => {
+    target.scrollIntoView({ block: "start" });
+  });
+}
+
+scrollToCurrentHashItem();
+window.addEventListener("hashchange", scrollToCurrentHashItem);
+
 
 // 画像の遅延読み込み
 document.querySelectorAll("img").forEach((img) => {
