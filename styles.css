@@ -413,3 +413,47 @@ nav.nav-sub span {
     top: 90px;
   }
 }
+
+/* ==========================================
+   8. ナビゲーション安定化
+   ========================================== */
+:root {
+  --nav-main-height: 54px;
+  --nav-main-mobile-height: 90px;
+}
+
+nav.nav-main {
+  min-height: var(--nav-main-height);
+}
+
+nav.nav-sub {
+  top: var(--nav-main-height);
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.work {
+  scroll-margin-top: calc(var(--nav-main-height) + 52px);
+}
+
+@media (max-width: 768px) {
+  nav.nav-main {
+    min-height: var(--nav-main-mobile-height);
+  }
+
+  nav.nav-sub {
+    top: var(--nav-main-mobile-height);
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 8px 6px;
+  }
+
+  nav.nav-sub a {
+    flex: 0 0 auto;
+  }
+
+  .work {
+    scroll-margin-top: calc(var(--nav-main-mobile-height) + 48px);
+  }
+}
