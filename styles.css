@@ -444,7 +444,7 @@ nav.nav-sub {
 
   nav.nav-sub {
     top: var(--nav-main-mobile-height);
-    justify-content: flex-start;
+    justify-content: center;
     gap: 8px;
     padding: 8px 6px;
   }
