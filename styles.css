@@ -460,3 +460,26 @@ nav.nav-sub {
     scroll-margin-top: calc(var(--nav-main-mobile-height) + 48px);
   }
 }
+
+/* ==========================================
+   9. スマホ用サブナビ中央寄せの強制
+   ========================================== */
+@media (max-width: 768px) {
+  body nav.nav-sub {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    overflow-x: hidden !important;
+    white-space: normal !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    gap: 8px !important;
+  }
+
+  body nav.nav-sub a {
+    flex: 0 0 auto !important;
+  }
+}
